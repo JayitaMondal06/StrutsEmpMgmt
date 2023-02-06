@@ -16,6 +16,7 @@ import org.apache.struts2.dispatcher.ApplicationMap;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.junit.Test;
 
 /**
  *
@@ -178,6 +179,7 @@ public class Employee extends ActionSupport implements ApplicationAware, Session
      *
      * @return @throws Exception
      */
+    @Test
     public String doAddEmployee() throws Exception {
         String result = "FAILURE";
         boolean success = EmployeeService.getInstance().doAddEmployee(this);
